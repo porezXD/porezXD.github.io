@@ -13,42 +13,6 @@ btn.addEventListener("click", function() {
     document.getElementById("points").innerHTML = Math.round(points);
 });
 
-
-
-//=================auto click mechanic=================
-let pointsps = 0;
-document.getElementById("pointsps").innerHTML = pointsps;
-
-//=================auto click=================
-let priceauto2 = 200;
-document.getElementById("priceauto2").innerHTML = priceauto2;
-
-auto2.addEventListener("click", function() {
-    if(points >= priceauto2){
-        
-        pointsps += 1;
-        points -= priceauto2;
-        document.getElementById("pointsps").innerHTML = pointsps;
-    }    
-});
-
-let i = 0;
-
-function pps() {         
-  setTimeout(function() { 
-    let pointspms = pointsps / 100;
-    points += pointspms;
-    document.getElementById("points").innerHTML = Math.round(points);  
-    i++;                   
-    pps();                 
-  }, 10)
-}
-pps(); 
-
-
-
-
-
 //=================SHOP=================
 
 
