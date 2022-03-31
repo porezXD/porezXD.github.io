@@ -7,7 +7,7 @@
 let power = 1;
 document.getElementById("power").innerHTML = power;
 
-let points = 101111100;
+let points = 0;
 document.getElementById("points").innerHTML = Math.round(points);
 
 //=======================================
