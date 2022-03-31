@@ -7,7 +7,7 @@
 let power = 1;
 document.getElementById("power").innerHTML = power;
 
-let points = 1000;
+let points = 101111100;
 document.getElementById("points").innerHTML = Math.round(points);
 
 //=======================================
@@ -89,6 +89,7 @@ piec.addEventListener("click", function() {
         document.getElementById("points").innerHTML = Math.round(points);
         document.getElementById("power").innerHTML = power;
         document.getElementById("price50").innerHTML = price50;
+        
     } 
 });
 
@@ -109,12 +110,17 @@ auto2.addEventListener("click", function() {
     if(points >= priceauto2){
         pointsps += 1;
         points -= priceauto2;
-        priceauto2 = Math.round(priceauto2 * 1.1);
         lvlauto += 1;
         document.getElementById("lvlauto").innerHTML = lvlauto;
-        document.getElementById("priceauto2").innerHTML = priceauto2;
         document.getElementById("pointsps").innerHTML = pointsps;
-    }    
+        if(priceauto2 <= 1000){
+            priceauto2 = Math.round(priceauto2 * 1.1);
+            document.getElementById("priceauto2").innerHTML = priceauto2;
+        } else {
+            priceauto2 = Math.round(priceauto2 * 1.05);
+            document.getElementById("priceauto2").innerHTML = priceauto2;
+        }
+    }
 });
 
 let i = 0;
